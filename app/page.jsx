@@ -1,6 +1,6 @@
 'use client'
 
-import { Text } from '@react-three/drei'
+import Text from '@/components/texts/Text'
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 
@@ -40,15 +40,12 @@ export default function Page() {
           <Common color={'lightpink'} />
         </Suspense>
       </View>
-      <div>
-        <View orbit className='relative h-full sm:h-48 sm:w-full'>
-          <Suspense fallback={null}>
-            <Text>Some text</Text>
-            <Duck route='/blob' scale={2} position={[0, -1.6, 0]} />
-            <Common color={'lightblue'} />
-          </Suspense>
-        </View>
-      </div>
+      <View orbit className='relative h-full  sm:h-60 sm:w-full'>
+        <Suspense fallback={null}>
+          <Text />
+          {/* <Common color={'lightblue'} /> */}
+        </Suspense>
+      </View>
     </>
   )
 }

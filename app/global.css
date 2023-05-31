@@ -17,3 +17,9 @@
     overflow: hidden;
   }
 }
+
+.about-text {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
