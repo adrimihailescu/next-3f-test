@@ -30,7 +30,8 @@ export default function Text() {
           bevelSegments={5}
           bevelSize={0.02}
         >
-          Text
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus nihil amet accusamus porro tenetur
+          quis a, reprehenderit laudantium odio? Nam voluptate maxime delectus ipsam quo soluta ipsa enim fugiat?
           {/* <meshMatcapMaterial matcap={matCapTexture} /> */}
         </Text3D>
       </Center>

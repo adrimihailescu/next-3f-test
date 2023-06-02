@@ -2,6 +2,8 @@
 
 import { useRef } from 'react'
 import dynamic from 'next/dynamic'
+import Navbar from '../navbar/Navbar'
+import Footer from '../footer/Footer'
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false })
 
 const Layout = ({ children }) => {
@@ -19,6 +21,8 @@ const Layout = ({ children }) => {
           touchAction: 'auto',
         }}
       >
+        <Navbar />
+        {/* <Footer /> */}
         {children}
         <Scene
           style={{
