@@ -6,10 +6,10 @@ const Projects = () => {
   const [photos, setPhotos] = useState()
 
   const getPhotos = async () => {
-    const response = await fetch('https://jsonplaceholder.typicode.com/photos')
+    const response = await fetch('https://jsonplaceholder.typicode.com/photos?_limit=100')
     const result = await response.json()
+    setPhotos(result)
     console.log(result)
-    // setPhotos(result)
   }
 
   useEffect(() => {

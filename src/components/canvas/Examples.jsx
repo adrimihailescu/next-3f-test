@@ -1,6 +1,6 @@
 'use client'
 
-import { useGLTF, useMatcapTexture, useTexture } from '@react-three/drei'
+import { GradientTexture, useGLTF, useMatcapTexture, useTexture } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import { useMemo, useRef, useState } from 'react'
@@ -22,8 +22,13 @@ export const Blob = ({ route = '/', ...props }) => {
       scale={0.2}
     >
       <sphereGeometry args={[1, 64, 64]} />
-      {/* <MeshDistortMaterial roughness={0} color={hovered ? 'hotpink' : '#1fb2f5'} speed={5} /> */}
-      <meshMatcapMaterial matcap={matcapTexture} />
+      <MeshDistortMaterial roughness={0} speed={5}>
+        {/**
+         * Gradient Texture has to be inside a mesh
+         */}
+        <GradientTexture stops={[0, 0.8, 1]} colors={['#e63946', '#f1faee', '#a8dadc']} size={100} />
+      </MeshDistortMaterial>
+      {/* <meshMatcapMaterial matcap={matcapTexture} /> */}
     </mesh>
   )
 }
