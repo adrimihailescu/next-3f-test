@@ -16,12 +16,14 @@ export default function Page() {
   return (
     <>
       <div className={styles.container}>
-        <View className='flex h-96 w-full flex-col items-center justify-center'>
-          <Suspense fallback={null}>
-            <Logo route='/blob' scale={0.6} position={[0, 0, 0]} />
-            <Common />
-          </Suspense>
-        </View>
+        <div className={styles.view}>
+          <View className={styles.viewLogo}>
+            <Suspense fallback={null}>
+              <Logo route='/blob' scale={1.5} position={[0, 0, 0]} />
+              <Common />
+            </Suspense>
+          </View>
+        </div>
         <div>
           <h2 className={styles.h2Class}>Some H2 text here</h2>
         </div>
@@ -31,7 +33,7 @@ export default function Page() {
           <Text />
         </Suspense>
       </View>
-      <View className='relative h-full  sm:h-96 sm:w-full'>
+      <View className='relative h-full'>
         <Suspense fallback={null}>
           <ambientLight />
           <Flag />

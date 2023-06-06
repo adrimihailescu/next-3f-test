@@ -40,9 +40,9 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
-        <View className='flex h-96 w-full flex-col items-center justify-center'>
+        <View className={styles.viewLogo}>
           <Suspense fallback={null}>
-            <Logo route='/blob' scale={1} position={[1, 0, 0]} />
+            <Logo route='/blob' scale={2} position={[1, 0, 0]} />
           </Suspense>
         </View>
       </div>

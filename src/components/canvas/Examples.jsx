@@ -11,7 +11,7 @@ export const Blob = ({ route = '/', ...props }) => {
   const router = useRouter()
   const [hovered, hover] = useState(false)
   useCursor(hovered)
-  const [matcapTexture] = useMatcapTexture('660505_F2B090_DD4D37_AA1914', 256)
+  // const [matcapTexture] = useMatcapTexture('660505_F2B090_DD4D37_AA1914', 256)
 
   return (
     <mesh
